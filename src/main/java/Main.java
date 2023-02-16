@@ -56,7 +56,7 @@ public class Main {
         System.out.printf("%.2f JPY = %.2f CNY\n\n", value, value / getCurrencyRate());
     }
 
-    private static double getCurrencyRate() {
+    public static double getCurrencyRate() {
         Double rate = null;
         try {
             JsonNode json = new ObjectMapper().readTree(new URL("https://api.exchangerate.host/latest?base=CNY"));
