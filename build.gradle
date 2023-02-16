@@ -6,4 +6,16 @@ repositories {
 
 dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.8.9'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.0'
+}
+
+sourceSets {
+    test {
+        java {
+            srcDirs = ['src/test']
+        }
+    }
+}
+test {
+    useJUnitPlatform()
 }
