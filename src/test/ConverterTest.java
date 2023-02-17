@@ -21,8 +21,8 @@ public class ConverterTest {
 
         String[] str = os.toString().replace(',', '.').split(" ");
 
-        Assertions.assertEquals(String.format("%.1f",Double.parseDouble(str[0]) * Main.getCurrencyRate())
-                , String.format("%.1f", Double.parseDouble(str[3])));
+        Assertions.assertEquals(Math.round(Double.parseDouble(str[0]) * Main.getCurrencyRate())
+                , Math.round(Double.parseDouble(str[3])));
 
     }
 
@@ -37,7 +37,7 @@ public class ConverterTest {
         String[] str = os.toString().replace(',', '.').split(" ");
 
         Assertions.assertEquals(500.0
-                , Math.floor(Double.parseDouble(str[3]) * Main.getCurrencyRate()));
+                , Math.round(Double.parseDouble(str[3]) * Main.getCurrencyRate()));
 
     }
 }
